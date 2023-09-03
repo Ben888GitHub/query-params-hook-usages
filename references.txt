@@ -1,0 +1,10 @@
+Refer to your apple note:
+- React & Next.js 💻 -> React Hooks -> use-query-params
+
+References:
+- https://www.npmjs.com/package/use-query-params 
+- https://www.youtube.com/watch?v=h9hYnDe8DtI&t=212s
+- https://www.bram.us/2020/08/05/usequeryparams-a-react-hook-for-managing-state-in-url-query-parameters/
+
+GitHub:
+- https://github.com/pbeshai/use-query-params

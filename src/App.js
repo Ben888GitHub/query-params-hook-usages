@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchBar from './component/SearchBar';
+import { QueryParamProvider } from 'use-query-params';
+import { ReactRouter6Adapter } from 'use-query-params/adapters/react-router-6';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import queryString from 'query-string';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<div className="App">
+				<QueryParamProvider
+					adapter={ReactRouter6Adapter}
+					// options={{
+					// 	searchStringToObject: queryString.parse,
+					// 	objectToSearchString: queryString.stringify
+					// }}
+				>
+					<p className="text-3xl mt-12 mb-10">Use Query Params</p>
+					<SearchBar />
+					{/* <Routes>
+						<Route path="/" element={<SearchBar />} />
+					</Routes> */}
+				</QueryParamProvider>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;
