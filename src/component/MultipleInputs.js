@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useQueryParams, StringParam, NumberParam } from 'use-query-params';
+import { useQueryParams, StringParam } from 'use-query-params';
 
 const MultipleInputs = () => {
 	const [query, setQuery] = useQueryParams({
